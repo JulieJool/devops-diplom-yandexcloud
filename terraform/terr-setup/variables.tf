@@ -18,35 +18,3 @@ variable "sa_name" {
   type        = string
   default     = "terr-sa"
 }
-
-variable "vpc_name" {
-  description = "VPC name"
-  type        = string
-  default     = "my-vpc"
-}
-
-variable "subnets" {
-  description = "Список подсетей c параметрами"
-  type = list(object({
-    name           = string
-    zone           = string
-    v4_cidr_blocks = list(string)
-  }))
-  default = [
-    {
-      name           = "subnet-a"
-      zone           = "ru-central1-a"
-      v4_cidr_blocks = ["10.0.1.0/24"]
-    },
-    {
-      name           = "subnet-b"
-      zone           = "ru-central1-b"
-      v4_cidr_blocks = ["10.0.2.0/24"]
-    },
-    {
-      name           = "subnet-d"
-      zone           = "ru-central1-d"
-      v4_cidr_blocks = ["10.0.3.0/24"]
-    }
-  ]
-}
