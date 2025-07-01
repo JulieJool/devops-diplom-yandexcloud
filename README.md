@@ -220,7 +220,13 @@ Kubeconfig автоматически передан на локальную м�
 При создании тега (например, `v2.0.1`) происходит новая сборка и отправка его в наш Dockerhub, но уже с деплоем в кластер:      
 
 ![](./img/5.2.png)      
+
+Cборка и отправка его в Dockerhub [juliejool/devops-nginx-test-app](https://github.com/JulieJool/devops-nginx-test-app):      
+
 ![](./img/5.3.png)      
+
+Результат деплоя в кластер:      
+
 ![](./img/5.4.png)      
  
 [ci-cd.yml](https://github.com/JulieJool/devops-nginx-test-app/blob/main/.github/workflows/ci-cd.yml)       
